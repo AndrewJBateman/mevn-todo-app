@@ -17,7 +17,8 @@ Full-stack todo app using MongoDB, Express.js, Vue and Node.js
 
 ## Screenshots
 
-![Example screenshot](./img/screenshot.png)
+![Vue frontend todo list with Vue devtool showing todo array object](./img/vueFrontend.png)
+![Node.js server todo list with Chrome devtool showing todo array object](./img/nodeBackend.png)
 
 ## Technologies
 
@@ -28,7 +29,7 @@ Full-stack todo app using MongoDB, Express.js, Vue and Node.js
 
 ## Setup
 
-To start the Vue frontend: from within the client directory: "ng serve"
+To start the Vue frontend: from within the client directory: "ng run dev"
 To start the Node.js backend: from within the server directory: "npm start"
 
 ## Code Examples
@@ -49,9 +50,9 @@ To-do list:
 * Wow improvement to be done 1
 * Wow improvement to be done 2
 
-## Status
+## App Status
 
-Project is: part 1 complete - working basic front and backends.
+Working basic Vue frontend and MongoDB backend.
 
 ## Inspiration
 
