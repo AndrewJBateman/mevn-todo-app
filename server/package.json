@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server to test Vue frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewJBateman/mevn-todo-app.git"
+  },
+  "keywords": [
+    "mevn",
+    "vue",
+    "nodejs"
+  ],
+  "author": "ABateman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndrewJBateman/mevn-todo-app/issues"
+  },
+  "homepage": "https://github.com/AndrewJBateman/mevn-todo-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10"
+  }
+}
