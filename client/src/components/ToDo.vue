@@ -1,15 +1,20 @@
 <template lang="html">
   <div id='wrapper'>
     <h1>MEVN Stack Todo List</h1>
+    <h4>Click on checkbox to delete Todo</h4>
     <!-- list todos and use checkbox inputs that call a delete method when clicked.  -->
     <ul>
       <li v-for='todo in todos' :key='todo._id'>
-        <input type='checkbox' @click='deleteTodo(todo._id)'>
+        <input
+          id='checkbox'
+          type='checkbox'
+          @click='deleteTodo(todo._id)'>
         {{ todo.title }}
       </li>
+
       <form v-on:submit='addTodo($event)' class='add-todo'>
         <input type='text' placeholder='Enter Todo' v-model='newTodo'/>
-        <input type='submit' value='Add +'/>
+        <input type='submit' value='Add To List'/>
 
       </form>
     </ul>
@@ -19,6 +24,8 @@
 
 <script>
 import ToDoAPI from '@/services/ToDoAPI.js'
+
+// data object returns existing Todo list then lifecycle hook 'mounted' used to show Todos
 export default {
   data () {
     return {
@@ -66,6 +73,11 @@ export default {
     margin: 0 auto;
     text-align: center;
   }
+
+  h1, h4 {
+    float: left;
+
+  }
   .add-todo {
     clear: both;
     margin-top: 10px;
@@ -77,7 +89,7 @@ export default {
     border: none;
     outline: none;
     float: left;
-    background-color: #00a8ff;
+    background-color: #8080c0;
     color: white;
     border-bottom: 1px solid white;
     font-size: 100%

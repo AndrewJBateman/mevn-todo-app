@@ -28,7 +28,7 @@ mongoClient.connect((err, db) => { // returns a connection to the mongodb
     return
   }
   client = db
-  console.log("connected");
+  console.log("connected to port", port);
 })
 
 // make app use dependencies
@@ -65,7 +65,7 @@ app.post('/deleteTodo', (req, res) => {
   })
 })
 
-// define route to get a todo
+// define /todo route to get todos
 app.get('/todo', (req, res) => {
   const collection = client.db("test").collection("todos");
   collection.find().toArray(function (err, results) {
@@ -77,5 +77,5 @@ app.get('/todo', (req, res) => {
     res.send(results);
   })
 })
-
-app.listen(process.env.PORT || 8082) // client is already running on 8080
+const port = 8082
+app.listen(process.env.PORT || port) // client is already running on 8080

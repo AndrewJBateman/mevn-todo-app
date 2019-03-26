@@ -1,5 +1,6 @@
 import API from '@/services/API'
 
+// Declare functions that call the server by using the axios API.
 export default {
   addTodo (todo) {
     return API().post('addTodo', {

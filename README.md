@@ -1,6 +1,8 @@
 # MEVN ToDo App
 
-Full-stack todo app using MongoDB, Express.js, Vue and Node.js
+A MEVN Full-stack todo app using MongoDB, Express.js, Vue and Node.js.
+
+**Note: to open web links in a new window use: _ctrl+click on link_**
 
 ## Table of contents
 
@@ -14,6 +16,10 @@ Full-stack todo app using MongoDB, Express.js, Vue and Node.js
 * [Contact](#contact)
 
 ## General info
+
+The project is a MEVN full stack, so it has 2 separate parts: a client-side for the frontend Vue framework and a server-side for the backend calls.
+
+The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas/login), collection name 'test'. This collection is accessed from the backend Node server file './src/app.js'. [Axios](https://www.npmjs.com/package/axios) is used to push Todo inputs to the server spp.js file then [mongodb](https://www.mongodb.com/) is used to write the data to the database.
 
 ## Screenshots
 
@@ -29,26 +35,82 @@ Full-stack todo app using MongoDB, Express.js, Vue and Node.js
 
 ## Setup
 
-To start the Vue frontend: from within the client directory: "ng run dev"
-To start the Node.js backend: from within the server directory: "npm start"
+* To start the Vue frontend:
+In the Client directory install dependencies using "npm install", then run frontend using "npm run dev".
+
+* To start the Node.js backend:
+In the Server directory install dependencies using "npm install", then run backend using "npm start".
 
 ## Code Examples
 
-Show examples of usage:
-`put-your-code-here`
+* Example of Backend code:
+
+```javascript
+`// define route to get todos
+app.get('/todo', (req, res) => {
+  const collection = client.db("test").collection("todos");
+  collection.find().toArray(function (err, results) {
+    if (err) {
+      console.log(err);
+      res.send([]);
+      return;
+    }
+    res.send(results);
+  })
+})
+const port = 8082
+app.listen(process.env.PORT || port) // client is already running on 8080`
+
+```
+
+* Example of Frontend code:
+
+```javascript
+import ToDoAPI from '@/services/ToDoAPI.js'
+
+// data object returns existing Todo list then lifecycle hook 'mounted' used to show Todos
+export default {
+  data () {
+    return {
+      newTodo: '',
+      todos: []
+    }
+  },
+  mounted () {
+    this.loadTodos()
+  },
+  methods: {
+    async addTodo (evt) {
+      evt.preventDefault() // prevents the form's default action from redirecting the page
+      const response = await ToDoAPI.addTodo(this.newTodo)
+      this.todos.push(response.data)
+      this.newTodo = '' // clear the input field
+    },
+    deleteTodo (todoID) {
+      ToDoAPI.deleteTodo(todoID)
+      // remove the array element with the matching id
+      this.todos = this.todos.filter(function (obj) {
+        return obj._id !== todoID
+      })
+    },
+    async loadTodos () {
+      const response = await ToDoAPI.getToDos()
+      this.todos = response.data
+    }
+  }
+}
+
+```
 
 ## Features
 
-List of features ready and TODOs for future development
+* Working Todo list - frontend and backend fully functional.
 
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+## To-do list
 
-To-do list:
+1. Improve frontend UI - change checkboxes to buttons.
 
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+2. Add a date field to Backend database.
 
 ## App Status
 
@@ -56,7 +118,7 @@ Working basic Vue frontend and MongoDB backend.
 
 ## Inspiration
 
-App created using Medium articles by Matt Maribojoc "Creating a ToDo App with a MEVN Full Stack" [Part 1](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-1-da0f4df7e15) and [Part 2](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-2-8180d944233a)
+App created using Medium articles by Matt Maribojoc "Creating a ToDo App with a MEVN Full Stack": [Part 1](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-1-da0f4df7e15) & [Part 2](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-2-8180d944233a).
 
 ## Contact
 
