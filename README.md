@@ -19,7 +19,7 @@ A MEVN Full-stack todo app using MongoDB, Express.js, Vue and Node.js.
 
 The project is a MEVN full stack, so it has 2 separate parts: a client-side for the frontend Vue framework and a server-side for the backend calls.
 
-The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas/login), collection name 'test'. This collection is accessed from the backend Node server file './src/app.js'. [Axios](https://www.npmjs.com/package/axios) is used to push Todo inputs to the server spp.js file then [mongodb](https://www.mongodb.com/) is used to write the data to the database.
+The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas/login), collection name 'test'. This collection is accessed from the backend Node server file './src/app.js'. [Axios](https://www.npmjs.com/package/axios) is used to push Todo inputs to the server app.js file then [mongodb](https://www.mongodb.com/) is used to write the data to the database.
 
 ## Screenshots
 
@@ -28,10 +28,10 @@ The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas
 
 ## Technologies
 
-* [MongoDB Atlas](https://www.mongodb.com/) version 4.0 using AWS Cloud storage.
-* [Express](https://www.npmjs.com/package/express) version 4.16.4
-* [Vue](https://vuejs.org/) version 3.
-* [Node.js](https://nodejs.org/en/) version 10.15.3
+* [MongoDB Atlas](https://www.mongodb.com/) using AWS Cloud storage.
+* [Express v4.17.1](https://www.npmjs.com/package/express)
+* [Vue v2.6.10](https://vuejs.org/)
+* [Node.js v12.3.1](https://nodejs.org/en/)
 
 ## Setup
 
@@ -122,4 +122,4 @@ App created using Medium articles by Matt Maribojoc "Creating a ToDo App with a 
 
 ## Contact
 
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
