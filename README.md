@@ -34,7 +34,8 @@ The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas
 * [Node.js v12.3.1](https://nodejs.org/en/)
 
 ## Setup
-
+First fork or clone the repo into your local machine!
+Then npm install into cloned folder, this will install the necessary dependencies, then navigate into te client folder.
 * To start the Vue frontend:
 In the Client directory install dependencies using "npm install", then run frontend using "npm run dev".
 
