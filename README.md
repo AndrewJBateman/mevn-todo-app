@@ -104,13 +104,11 @@ export default {
 
 ## Features
 
-* Working Todo list - frontend and backend fully functional.
+* Working Todo list - frontend and backend fully functional. Webpack framework is not deprecated. Do not update dependencies or lots of Webpack problems appear.
 
 ## To-do list
 
-1. Improve frontend UI - change checkboxes to buttons.
-
-2. Add a date field to Backend database.
+1. Nothing
 
 ## App Status
 
