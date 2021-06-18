@@ -1,8 +1,12 @@
 # MEVN ToDo App
 
-A MEVN Full-stack todo app using MongoDB, Express.js, Vue and Node.js.
+* A MEVN Full-stack todo app using MongoDB, Express.js, Vue and Node.js.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-**Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/mevn-todo-app?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/mevn-todo-app?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/mevn-todo-app?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/mevn-todo-app?style=plastic)
 
 ## Table of contents
 
@@ -17,9 +21,8 @@ A MEVN Full-stack todo app using MongoDB, Express.js, Vue and Node.js.
 
 ## General info
 
-The project is a MEVN full stack, so it has 2 separate parts: a client-side for the frontend Vue framework and a server-side for the backend calls.
-
-The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas/login), collection name 'test'. This collection is accessed from the backend Node server file './src/app.js'. [Axios](https://www.npmjs.com/package/axios) is used to push Todo inputs to the server app.js file then [mongodb](https://www.mongodb.com/) is used to write the data to the database.
+* The project is a MEVN full stack, so it has 2 separate parts: a client-side for the frontend Vue framework and a server-side for the backend calls.
+* The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas/login), collection name 'test'. This collection is accessed from the backend Node server file './src/app.js'. [Axios](https://www.npmjs.com/package/axios) is used to push Todo inputs to the server app.js file then [mongodb](https://www.mongodb.com/) is used to write the data to the database.
 
 ## Screenshots
 
@@ -29,17 +32,14 @@ The MongoDB database runs on [Mongo Atlas](https://cloud.mongodb.com/user#/atlas
 ## Technologies
 
 * [MongoDB Atlas](https://www.mongodb.com/) using AWS Cloud storage.
-* [Express v4.17.1](https://www.npmjs.com/package/express)
-* [Vue v2.6.10](https://vuejs.org/)
-* [Node.js v12.3.1](https://nodejs.org/en/)
+* [Express v4](https://www.npmjs.com/package/express)
+* [Vue v2](https://vuejs.org/)
+* [Node.js v14](https://nodejs.org/en/)
 
 ## Setup
 
-* To start the Vue frontend:
-In the Client directory install dependencies using "npm install", then run frontend using "npm run dev".
-
-* To start the Node.js backend:
-In the Server directory install dependencies using "npm install", then run backend using "npm start".
+* To start the Vue frontend: In the Client directory install dependencies using "npm install", then run frontend using "npm run dev".
+* To start the Node.js backend: In the Server directory install dependencies using "npm install", then run backend using "npm start".
 
 ## Code Examples
 
@@ -108,16 +108,20 @@ export default {
 
 ## To-do list
 
-1. Nothing
+* Nothing
 
 ## App Status
 
-Working basic Vue frontend and MongoDB backend.
+* Working basic Vue frontend and MongoDB backend.
 
 ## Inspiration
 
-App created using Medium articles by Matt Maribojoc "Creating a ToDo App with a MEVN Full Stack": [Part 1](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-1-da0f4df7e15) & [Part 2](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-2-8180d944233a).
+* App created using Medium articles by Matt Maribojoc "Creating a ToDo App with a MEVN Full Stack": [Part 1](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-1-da0f4df7e15) & [Part 2](https://medium.com/@mattmaribojoc/creating-a-todo-app-with-a-mevn-full-stack-part-2-8180d944233a).
 
-## Contact
+## :file_folder: License
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* N/A.
+
+## :envelope: Contact
+
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
